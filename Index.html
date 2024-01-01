@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <!--Basics Information-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width =device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!--TIle for the website that you need-->
+        
+        <title>Portpolio website</title>
+        <!--Link the important file-->
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/df08cdaf6c.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="container"></div>
+        <nav>
+            <img src="logo1.png" class="logo">
+        <!--Order Navigation bar-->  
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Bio</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </nav>
+        <div class="header-text">
+            <p class="full-stack">Full-Stack</p>
+            <p class="developer">Developer</p>
+            <h1>Hi, I'm <span>Aditya</span><br>Choudhry From India</h1>
+        </div>
+        </div>
+        <!--Bio tab-->
+        <div id="bio">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1"><img src="IMG_20220411_091949.jpg"></div>
+                    <div class="about-col-2">
+                        <H1 class="sub-title">Bio</H1>
+                        <p>"Dedicated Full Stack Dev with 1 year experience in Nodejs, Reactjs, ExpressJs, NextJS, and MYSQL. Proven track record in delivering robust and scalable web applications."</p>
+                        <p></p>
+                        <p></p>
+                        <div class="tab-title">
+                            <p class="tab-links active-link " onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('certificate')">Certificate</p>
+                        </div>
+                        <div class="tab-content active-tab" id="education">
+                            <ul>
+                                <li><span>Class 12</span><br>CBSE</li>
+                                <li><span>B-Tech Civil Engineering</span><br>DIT University 2015-2019</li>
+                                <li><span>MCA(Computer applications/AI)</span><br>MMICTBM - 2022-2024</li>
+                            </ul>
+                        </div>
+                        <div class="tab-content " id="skills">
+                            <ul>
+                                <li><span>Programming Language</span><br>C, C++, JAVA, Python, JavaScript, R, SQL, MySQL</li>
+                                <li><span>CLoud Computing</span><br>Azure, Google cloud, AWS, Servies Now</li>
+                                <li><span>Software</span><br>Autocad, Revit, Figma, Git, Visyal studio code, Unity </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="certificate">
+                            <ul>
+                                <li><span>Python</span><br>Designing web interface</li>
+                                <li><span>Cloud Computing</span><br>Designing web interface</li>
+                                <li><span>Web devlopment</span><br>Designing web interface</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Projects-->
+        <div id="project">
+            <div class="container">
+                <h1 class="sub-title">Projects</h1>
+                <div class="project-list">
+                    <div>
+                        <i class="fa-brands fa-webflow"></i>
+                        <h2>Portpolio</h2>
+                        <p>Html, CSS JAvascript Mode js Excel Mysql</p>
+                        <a href="#">Link</a>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-app-store"></i>
+                        <h2>Portal</h2>
+                        <p>React.js Node.js Mysql</p>
+                        <a href="#">Link</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                        <h2>Game</h2>
+                        <p>Unity, c++ ,c#, .netframwork, graphics</p>
+                        <a href="#">Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---Portfolio-->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">Portfolio</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="work-3.png">
+                        <div class="layer">
+                            <h3>Social App</h3>
+                            <p>Dwnload the app</p>
+                            <a href="#">Link</a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="work-2.png">
+                        <div class="layer">
+                            <h3>Game</h3>
+                            <p>Play</p>
+                            <a href="#">Link</a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="work-1.png">
+                        <div class="layer">
+                            <h3>Website</h3>
+                            <p>VIsit the website</p>
+                            <a href="#">Link</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-content");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link")
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+        </script>
+    </body>
+</html>
